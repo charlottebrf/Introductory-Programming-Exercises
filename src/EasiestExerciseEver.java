@@ -2,7 +2,7 @@ public class EasiestExerciseEver {
 
      String astericks = "*";
 
-    public String printer() {
+    String printer() {
         return astericks;
     }
 
