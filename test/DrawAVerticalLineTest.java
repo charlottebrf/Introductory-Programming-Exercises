@@ -7,7 +7,7 @@ public class DrawAVerticalLineTest {
     @Test
     public void printsOneAsterisk() {
         DrawAVerticalLine verticalLine = new DrawAVerticalLine();
-        assertEquals("prints one asterisk when given 1", System.out.println("*"), verticalLine.main(1));
+        assertEquals("prints one asterisk when given 1", System.out.print("*\n") verticalLine.main(1));
     }
 
     @Test
