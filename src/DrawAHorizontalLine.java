@@ -2,8 +2,13 @@ public class DrawAHorizontalLine {
 
     String asterisk = "*";
 
-    String printer(Integer width) {
-        return new String(new char[width]).replace("\0", asterisk);
+
+    String printer(int width) {
+        String result = "";
+        for (int i = 1; i <= width; i++) {
+            result += asterisk;
+        }
+        return result;
     }
 
 }
