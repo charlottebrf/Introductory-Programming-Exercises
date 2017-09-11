@@ -11,7 +11,7 @@ public class DrawAHorizontalLineTest {
     }
 
     @Test
-    public void printsOneAsterisk() {
+    public void printsOnexAsterisk() {
         DrawAHorizontalLine line = new DrawAHorizontalLine();
         assertEquals("prints an asterisk when given 1", "*", line.printer(1));
     }
