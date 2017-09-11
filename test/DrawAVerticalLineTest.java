@@ -1,8 +1,7 @@
 import org.junit.Test;
 import java.io.*;
-//import static java.lang.System.*;
-
 import static org.junit.Assert.*;
+
 
 public class DrawAVerticalLineTest {
 //    OutputStream os = new ByteArrayOutputStream();
@@ -13,7 +12,7 @@ public class DrawAVerticalLineTest {
     public void printsOneAsterisk() {
         DrawAVerticalLine verticalLine = new DrawAVerticalLine();
         String asterisk = "*\n";
-        assertEquals("prints one asterisk when given 1", java.lang.System.out.println(asterisk), verticalLine.main(1));
+        assertEquals("prints one asterisk when given 1", asterisk, verticalLine.main(1));
     }
 
     @Test

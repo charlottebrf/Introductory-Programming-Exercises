@@ -1,7 +1,7 @@
 public class DrawAVerticalLine {
 
 
-    public void printer(int num) {
+    public static void printer(int num) {
         String asterisk = "*";
         for (int i = 0; i < num; i++) {
             System.out.println(asterisk);
@@ -9,7 +9,7 @@ public class DrawAVerticalLine {
          System.out.println(" ");
     };
 
-     public void main (int num) {
+     public static void main (int num) {
        printer(num);
     }
 }
