@@ -5,9 +5,9 @@ public class IsoscelesTriangle {
         String result = "";
         DrawARightTriangle rightTriangle = new DrawARightTriangle();
         for (int i = 1; i <= num; i++) {
-            result += rightTriangle.printer(i);
+            result += StringUtils.center(rightTriangle.printer(i), 10);
         }
-        return StringUtils.center(result, 10);
+        return result;
     }
 
 }
