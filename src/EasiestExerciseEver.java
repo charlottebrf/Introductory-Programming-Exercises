@@ -1,9 +1,9 @@
 public class EasiestExerciseEver {
 
-//     String astericks = "*";
+     String astericks = "*";
 
     public String printer() {
-        return "*";
+        return astericks;
     }
 
 }
