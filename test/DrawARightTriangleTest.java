@@ -18,8 +18,8 @@ public class DrawARightTriangleTest {
 
 
     @Test
-    public void drawsAnotherAsteriskLine() throws Exception {
+    public void drawsThreeLineFor3() throws Exception {
         DrawARightTriangle triangle = new DrawARightTriangle();
-        assertEquals("prints 2 sides of the triangle", "*\n**\n***", triangle.printer(3));
+        assertEquals("prints 2 sides of the triangle", "*\n**\n***\n", triangle.printer(3));
     }
 }

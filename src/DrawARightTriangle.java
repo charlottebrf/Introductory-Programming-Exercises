@@ -1,12 +1,15 @@
+import java.util.*;
+
 public class DrawARightTriangle {
 
-    String printer(int num) {
-        String asterisk = "*";
-        String numberAsAsterisk = new String();
-        for (int i = 0; i < num; i++) {
-             numberAsAsterisk = new String(new char[i]).replace("\0", asterisk);
+    public String printer(int num) {
+        String result = "";
+        DrawAHorizontalLine horizontalLine = new DrawAHorizontalLine();
+        for (int i = 1; i <= num; i++) {
+            result += horizontalLine.printer(i);
+            result += "\n";
         }
-        return numberAsAsterisk + "\n";
+        return result;
     }
 
 }

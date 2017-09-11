@@ -1,15 +1,13 @@
 public class DrawAVerticalLine {
 
-
-    public static void printer(int num) {
+    public String printer(int num) {
+        String result = "";
         String asterisk = "*";
-        for (int i = 0; i < num; i++) {
-            System.out.println(asterisk);
-        }
-         System.out.println(" ");
-    };
 
-     public static void main (int num) {
-       printer(num);
+        for (int i = 0; i < num; i++) {
+            result += asterisk + "\n";
+        }
+        return result;
     }
+
 }
