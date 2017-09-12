@@ -1,7 +1,7 @@
 import org.apache.commons.lang3.StringUtils;
-import java.util.*;
 
 public class IsoscelesTriangle {
+    private String asterisk = "*";
 
     public int subtractTwo(int num) {
         return num - 2;
@@ -19,26 +19,54 @@ public class IsoscelesTriangle {
         return result;
     }
 
-    public String printer(int num) {
-        String result = "";
-        DrawARightTriangle rightTriangle = new DrawARightTriangle();
-        for (int i = 1; i <= num; i++) {
-            result += StringUtils.center(rightTriangle.printer(i), 10);
-        }
-        return result;
+    public int addTwo(int num) {
+        return num + 2;
     }
 
+    public String asteriskGenerator(int width) {
+        String result = "";
+        for (int i = 1; i <= width; i++) {
+            result += asterisk;
+        }
+        return this.formatter(result);
+    }
+
+    public int checkOdd(int num) {
+        int odd = 0;
+        if (num % 2 != 0) {
+            odd += num;
+        }
+        return odd;
+    }
+
+    public String formatter(String resultString) {
+        return StringUtils.center(resultString, 10);
+    }
+
+
+    public String subtractionPrinter(int num) {
+        String resultString = "";
+        int resultNumber = 0;
+        for (int i = 1; i <= num; i++) {
+            resultNumber += this.GreaterThanOne(num);
+            if (resultNumber == this.checkOdd(resultNumber)) {
+                resultString += this.asteriskGenerator(resultNumber) + "\n";
+                resultString = this.formatter(resultString);
+            }
+        }
+        return this.formatter(resultString);
+    }
+
+    public String additionPrinter(int num) {
+        String resultString = "";
+        int addedNumber = addTwo(num);
+        resultString += this.asteriskGenerator(addedNumber) + "\n";
+        return resultString;
+    }
+
+    public String Printer(int num) {
+        String substractedStrings = this.subtractionPrinter(num);
+        String addedStrings = this.additionPrinter(num);
+        return substractedStrings + addedStrings;
+    }
 }
-
-
-
-//Problem 1: isosceles
-//
-//        For num = 3;
-//
-//        1, 3, 5
-//
-//        Add the result of each to some kind of a list so they are in correct order and then print centred:
-//        Method 1: Print asterisks for num - 2 until you get to 1;
-//        Method 2: Print asterisks for num;
-//        Print asterisks for num + 2;
