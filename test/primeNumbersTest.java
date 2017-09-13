@@ -37,7 +37,7 @@ public class primeNumbersTest {
         list.add(2);
         list.add(3);
         list.add(5);
-        assertEquals("2, 3 & 5 are factors of 30 & prime numbers", list , prime.generate(30));
+        assertEquals("2, 3 & 5 are factors of 30 & prime numbers", list , prime.generate(3));
     }
 
 }
