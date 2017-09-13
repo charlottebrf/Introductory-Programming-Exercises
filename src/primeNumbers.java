@@ -5,7 +5,11 @@ import java.util.*;
 public class primeNumbers {
 
     public ArrayList<Integer> generate(Integer num) {
-        return this.primeNumberGenerator(num);
+        if (this.primeNumberGenerator(num).isEmpty()) {
+            return this.primeNumberGenerator(num);
+        } else {
+            return this.sortInAscendingOrder(this.primeNumberGenerator(num));
+        }
     }
 
     public ArrayList<Integer> primeNumberGenerator(Integer num) {
@@ -20,6 +24,10 @@ public class primeNumbers {
             }
         }
         return result;
+    }
+
+    public ArrayList<Integer> sortInAscendingOrder(ArrayList<Integer> list) {
+        return Collections.sort(list);
     }
 
 }
