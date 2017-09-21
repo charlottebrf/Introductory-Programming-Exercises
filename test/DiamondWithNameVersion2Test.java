@@ -18,21 +18,26 @@ public class DiamondWithNameVersion2Test {
 
     @Test
     public void printsSpacesForAGivenNum() {
-        assertEquals(" *** ", diamond.makeSpace("***", 1));
+        assertEquals(" ", diamond.makeSpace(1));
     }
 
     @Test
     public void printsSpacesForAnotherGivenNum() {
-        assertEquals("   ***   ", diamond.makeSpace("***", 3));
+        assertEquals("   ", diamond.makeSpace(3));
     }
 
     @Test
     public void removesAsterisksForAGivenNum() {
         assertEquals("***", diamond.removeAsterisk( "*****",2));
     }
-//
-//    @Test
-//    public void generatesADiamondShape() {
-//        assertEquals("  *  \n *** \n*****\n *** \n  *  \n", diamond.generator(3));
-//    }
+
+    @Test
+    public void removesMoreAsterisksForAGivenNum() {
+        assertEquals("*", diamond.removeAsterisk( "*****",4));
+    }
+
+    @Test
+    public void generatesADiamondShape() {
+        assertEquals("  *  \n *** \n*****\n *** \n  *  \n", diamond.generator(3));
+    }
 }
