@@ -25,4 +25,14 @@ public class DiamondWithNameVersion2Test {
     public void printsSpacesForAnotherGivenNum() {
         assertEquals("   ***   ", diamond.makeSpace("***", 3));
     }
+
+    @Test
+    public void removesAsterisksForAGivenNum() {
+        assertEquals("***", diamond.removeAsterisk( "*****",2));
+    }
+//
+//    @Test
+//    public void generatesADiamondShape() {
+//        assertEquals("  *  \n *** \n*****\n *** \n  *  \n", diamond.generator(3));
+//    }
 }
