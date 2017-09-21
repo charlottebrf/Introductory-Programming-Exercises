@@ -12,7 +12,17 @@ public class DiamondWithNameVersion2Test {
     }
 
     @Test
-    public void printsAsterisksForAGivenLine() {
+    public void printsAsterisksForAGivenNum() {
         assertEquals("***", diamond.makeAsterisk(3));
+    }
+
+    @Test
+    public void printsSpacesForAGivenNum() {
+        assertEquals(" *** ", diamond.makeSpace("***", 1));
+    }
+
+    @Test
+    public void printsSpacesForAnotherGivenNum() {
+        assertEquals("   ***   ", diamond.makeSpace("***", 3));
     }
 }

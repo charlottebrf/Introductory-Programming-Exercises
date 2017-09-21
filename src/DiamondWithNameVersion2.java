@@ -9,5 +9,15 @@ public class DiamondWithNameVersion2 {
         return result;
     }
 
+    public String makeSpace(String asterisks, int num) {
+        String space = "";
+        for (int i = 1; i <= num; i++) {
+            space += " ";
+        }
+        return space + asterisks + space;
+    }
+
+
+
 
 }
