@@ -3,12 +3,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class DiamondWithNameVersion2Test {
-    DiamondWithNameVersion2 diamond = new DiamondWithNameVersion2();
+public class DiamondVersion2Test {
+    DiamondVersion2 diamond = new DiamondVersion2();
 
     @Before
     public void setUp() {
-        diamond = new DiamondWithNameVersion2();
+        diamond = new DiamondVersion2();
     }
 
     @Test

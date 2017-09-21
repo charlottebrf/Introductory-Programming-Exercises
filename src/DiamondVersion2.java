@@ -1,17 +1,17 @@
-public class DiamondWithNameVersion2 {
+public class DiamondVersion2 {
 
     public String asterisk(int num) {
-        String result = "";
-        for (int i = 1; i <= num; i++) {
-            result += "*";
-        }
-        return result;
+        return repeat(num, "*");
     }
 
     public String blanks(int num) {
+        return repeat(num, " ");
+    }
+
+    private String repeat(int num, String space1) {
         String space = "";
         for (int i = 1; i <= num; i++) {
-            space += " ";
+            space += space1;
         }
         return space;
     }
