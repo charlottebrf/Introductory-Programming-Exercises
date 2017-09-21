@@ -1,17 +1,14 @@
-import org.apache.commons.lang3.StringUtils;
-
 public class DiamondWithNameVersion2 {
-    private String asterisk = "*";
 
-    public String makeAsterisk(int num) {
+    public String asterisk(int num) {
         String result = "";
         for (int i = 1; i <= num; i++) {
-            result += asterisk;
+            result += "*";
         }
         return result;
     }
 
-    public String makeSpace(int num) {
+    public String blanks(int num) {
         String space = "";
         for (int i = 1; i <= num; i++) {
             space += " ";
@@ -19,27 +16,31 @@ public class DiamondWithNameVersion2 {
         return space;
     }
 
-    public String removeAsterisk(String asterisks, int num) {
-        StringBuilder newAsterisks = new StringBuilder(asterisks);
-        newAsterisks.replace(0, num, "");
-        return newAsterisks.toString();
-    }
-
-
     public String generator(int num) {
-        int numPlusTwo = num + 2;
-        asterisk = makeAsterisk(numPlusTwo);
-        int numBlankSpaces = 0;
-        String asteriskForI = null;
-        String diamond = "";
-
-        for (int i = 1; i <= num; i++) {
-            if (i % 2 != 0) {
-                numBlankSpaces += numPlusTwo - i;
-                asteriskForI += removeAsterisk(asterisk, numBlankSpaces);
-                diamond += asteriskForI + "\n";
-            }
-        }
-        return diamond;
+        return topDiamond(num) + bottomDiamond(num);
     }
+
+    private String bottomDiamond(int num) {
+        String result = "";
+        for (int i = num - 2; i >= 0; i--) {
+            result += row(num, i);
+        }
+        return result;
+    }
+
+    private String topDiamond(int num) {
+        String result = "";
+
+        for (int i = 0; i <= num - 1; i++) {
+            result += row(num, i);
+        }
+        return result;
+    }
+
+    private String row(int num, int i) {
+        int totalBlanks = num + 1 - 2 * i;
+        String blanks = blanks(totalBlanks / 2);
+        return blanks + asterisk(2 * i + 1) + blanks + "\n";
+    }
+
 }
